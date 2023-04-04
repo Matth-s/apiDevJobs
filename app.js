@@ -20,7 +20,7 @@ app.use((req, res, next) => {
 });
 
 app.get("/", (req, res) => {
-  res.json(data);
+  res.status(200).json(data);
 });
 
 module.exports = app;
