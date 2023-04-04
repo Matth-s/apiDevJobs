@@ -26,7 +26,7 @@ app.get("/", (req, res) => {
 app.get("/:id", (req, res) => {
   const id = req.params.id;
 
-  const foundItem = data.filter((item) => item.id === id);
+  const foundItem = data.filter((item) => item.id = id);
 
   if (foundItem.length > 0) {
     res.status(200).send(foundItem);
