@@ -24,15 +24,16 @@ app.get("/", (req, res) => {
 });
 
 app.get("/:id", (req, res) => {
-  const id = req.body.id;
+  const id = req.params.id;
 
   const foundItem = data.filter((item) => item.id === id);
 
-  if (foundItem) {
+  if (foundItem.length > 0) {
     res.status(200).send(foundItem);
   } else {
     res.status(404).send({ message: "Object not found" });
   }
 });
+
 
 module.exports = app;
